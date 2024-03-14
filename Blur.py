@@ -38,6 +38,3 @@ def gaussian_blur(img, kernel_size, sigma):
     blurred_pil_img = cv_to_pil(blurred_img).convert('RGBA')
 
     return blurred_pil_img
-img = cv2.imread('image.jpg')
-img2 = cv_to_pil(img)
-background_gaussian_blur(img2, 25, 5)
