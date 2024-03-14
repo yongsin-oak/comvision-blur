@@ -5,18 +5,15 @@ from rembg import remove
 
 drawing_left = False  # True if mouse is pressed
 drawing_right = False 
-ix, iy = -1, -1
 
 def draw_blur(event, x, y, flags, param):
-    global ix, iy, drawing_left, drawing_right, img_result, backup
+    global drawing_left, drawing_right, img_result, backup
     
     if event == cv2.EVENT_LBUTTONDOWN:
         drawing_left = True
-        ix, iy = x, y
     
     if event == cv2.EVENT_RBUTTONDOWN:
         drawing_right = True
-        ix, iy = x, y
 
     elif event == cv2.EVENT_MOUSEMOVE:
         if drawing_left == True:
